@@ -9,12 +9,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table'
+import { MatCardModule } from '@angular/material/card';
 import { ListUsersComponent } from './list-users/list-users.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ListStarsComponent } from './list-stars/list-stars.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    ListUsersComponent,
+    ListStarsComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +29,9 @@ import { ListUsersComponent } from './list-users/list-users.component';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule, 
-    MatTableModule
+    MatTableModule,
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

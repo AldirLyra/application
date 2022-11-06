@@ -5,7 +5,7 @@ import { UsersWithStars } from '../model/users-with-stars';
 @Injectable({
   providedIn: 'root'
 })
-export class UsersWithStarsService {
+export class UserWithStarsService {
 
   constructor(private httpClient : HttpClient) { }
 

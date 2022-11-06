@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { UsersWithStars } from './model/users-with-stars';
+import { UserWithStarsService } from './service/user-with-stars.service';
 
 @Component({
   selector: 'app-list-stars',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListStarsComponent implements OnInit {
 
-  constructor() { }
+  users!: MatTableDataSource<UsersWithStars>;
+  displayedColumns = ['id', 'name', 'description', 'urlGithub', 'urlHtml']
+
+  constructor(private userWithStarsService: UserWithStarsService) { 
+    this.list();
+  }
 
   ngOnInit(): void {
+  }
+
+  list(): void {
+    this.userWithStarsService.listUserStars().subscribe(
+      (data) => this.users = new MatTableDataSource(data)
+    );
   }
 
 }

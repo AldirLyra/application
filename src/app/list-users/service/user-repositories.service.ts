@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { UserRepositories } from '../model/user-repositories';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ListUsersService {
+export class UserRepositoriesService {
 
   constructor(private httpClient : HttpClient) { }
 
@@ -14,5 +14,4 @@ export class ListUsersService {
   public listUser(){
     return this.httpClient.get<UserRepositories[]>(this.LISTREPOSITORIES);
   }
-  
 }
