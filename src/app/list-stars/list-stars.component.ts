@@ -11,7 +11,7 @@ import { UserWithStarsService } from './service/user-with-stars.service';
 export class ListStarsComponent implements OnInit {
 
   users!: MatTableDataSource<UsersWithStars>;
-  displayedColumns = ['id', 'name', 'description', 'urlGithub', 'urlHtml']
+  displayedColumns = ['name', 'description', 'urlhtml', 'user']
 
   constructor(private userWithStarsService: UserWithStarsService) { 
     this.list();

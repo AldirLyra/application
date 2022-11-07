@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { ListUsersComponent } from './list-users.component';
 
@@ -8,7 +9,10 @@ describe('ListUsersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListUsersComponent ]
+      declarations: [ ListUsersComponent ],
+      schemas: [
+        NO_ERRORS_SCHEMA
+      ]
     })
     .compileComponents();
 
@@ -20,4 +24,5 @@ describe('ListUsersComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

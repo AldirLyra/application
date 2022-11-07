@@ -9,9 +9,10 @@ export class UserRepositoriesService {
 
   constructor(private httpClient : HttpClient) { }
 
-  private readonly LISTREPOSITORIES = 'https://api.github.com/users/'+ 'AldirLyra' +'/repos?per_page=50';
+  private readonly DEFAULTREPOSITORIE = 'https://api.github.com/users/rafaballerini/repos?per_page=50';
 
-  public listUser(){
-    return this.httpClient.get<UserRepositories[]>(this.LISTREPOSITORIES);
+  public list(){
+    console.log(this.DEFAULTREPOSITORIE);
+    return this.httpClient.get<UserRepositories[]>(this.DEFAULTREPOSITORIE);
   }
 }

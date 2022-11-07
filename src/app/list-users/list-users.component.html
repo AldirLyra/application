@@ -1,11 +1,6 @@
 <mat-card>
-    <table mat-table [dataSource]="users">
 
-        <!-- Name Column -->
-        <ng-container matColumnDef="id">
-            <th mat-header-cell *matHeaderCellDef>Id</th>
-            <td mat-cell *matCellDef="let user"> {{user.id}} </td>
-        </ng-container>
+    <table mat-table [dataSource]="users">
 
         <!-- Name Column -->
         <ng-container matColumnDef="name">
@@ -20,15 +15,14 @@
         </ng-container>
 
         <!-- Symbol Column -->
-        <ng-container matColumnDef="urlGithub">
-            <th mat-header-cell *matHeaderCellDef> Url Github </th>
-            <td mat-cell *matCellDef="let user"> {{user.urlGithub}} </td>
+        <ng-container matColumnDef="urlhtml">
+            <th mat-header-cell *matHeaderCellDef> Url Repositório </th>
+            <td mat-cell *matCellDef="let user"><a style="color: white;" href="{{user.html_url}}" target="_blank"> Link </a></td>
         </ng-container>
 
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="urlHtml">
-            <th mat-header-cell *matHeaderCellDef> Url Html </th>
-            <td mat-cell *matCellDef="let user"> {{user.urlHtml}} </td>
+        <ng-container matColumnDef="user">
+            <th mat-header-cell *matHeaderCellDef> Usuário </th>
+            <td mat-cell *matCellDef="let user"> {{user.owner.login}} </td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

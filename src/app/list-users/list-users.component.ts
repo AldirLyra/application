@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { Observable } from 'rxjs';
 import { UserRepositories } from './model/user-repositories';
 import { UserRepositoriesService } from './service/user-repositories.service';
 
@@ -11,7 +12,7 @@ import { UserRepositoriesService } from './service/user-repositories.service';
 export class ListUsersComponent implements OnInit {
 
   users!: MatTableDataSource<UserRepositories>;
-  displayedColumns = ['id', 'name', 'description', 'urlGithub', 'urlHtml']
+  displayedColumns = ['name', 'description', 'urlhtml', 'user']
 
   constructor(private userRepositoriesService: UserRepositoriesService) { 
     this.list();
@@ -21,7 +22,7 @@ export class ListUsersComponent implements OnInit {
   }
 
   list(): void {
-    this.userRepositoriesService.listUser().subscribe(
+    this.userRepositoriesService.list().subscribe(
       (data) => this.users = new MatTableDataSource(data)
     );
   }
