@@ -1,0 +1,15 @@
+.img-git {
+    margin-inline: 10px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+footer {
+    background-color: #e0e;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
