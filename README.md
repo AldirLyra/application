@@ -1,6 +1,10 @@
-# Application
+# List of repositories
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
+
+## Getting started
+
+To get started, run the `npm install` command to add the libraries for running the project.
 
 ## Development server
 
