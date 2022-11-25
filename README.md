@@ -1,5 +1,7 @@
 # List of repositories
 
+This project lists repositories for a given github user
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
 
 ## Getting started
